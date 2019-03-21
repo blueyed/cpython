@@ -353,7 +353,7 @@ class _OutputRedirectingPdb(pdb.Pdb):
         self.__out = out
         self.__debugger_used = False
         # do not play signal games in the pdb
-        pdb.Pdb.__init__(self, stdout=out, nosigint=True)
+        super().__init__(stdout=out, nosigint=True)
         # still use input() to get user input
         self.use_rawinput = 1
 
