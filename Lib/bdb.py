@@ -200,7 +200,7 @@ class Bdb:
     def stop_here(self, frame):
         "Return True if frame is below the starting frame in the stack."
         if (self.stopframe is None
-                and self.returnframes is None
+                and self.returnframe is None
                 and self.stoplineno == 0):  # TEST: via set_step
             return True
         if self.skip and \
